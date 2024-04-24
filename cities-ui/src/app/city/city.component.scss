@@ -1,0 +1,25 @@
+.cities-grid {
+  display: grid;
+  gap: 2rem;
+  // width: min(95%, 70rem);
+  height: min(40%, 100rem);
+}
+
+.city-card {
+  font-size: large;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background-color: brown;
+}
+
+@media (min-width: 40em) {
+  .cities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 80em) {
+  .cities-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
