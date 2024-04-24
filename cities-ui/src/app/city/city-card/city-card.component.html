@@ -2,5 +2,7 @@
   <app-city-card-header [city]="city"></app-city-card-header>
   <app-city-card-image [name]="city.name"></app-city-card-image>
   <app-city-card-content [landmarks]="city.landmarks"></app-city-card-content>
-  <app-city-card-actions [city]="city"></app-city-card-actions>
+  <app-city-card-actions
+    [city]="city"
+    (openDialogEvent)="handleOpenDialog()"></app-city-card-actions>
 </mat-card>

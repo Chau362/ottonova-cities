@@ -12,23 +12,24 @@ import { CityVm } from './viewmodels/city.viewmodel';
 export class CityService {
   private readonly apiService = inject(CityApiService);
 
-  getCities$() {
-    const cityDtos$ = this.apiService.getCities$();
-    const cityVms$: Observable<CityVm[]> = cityDtos$.pipe(
+  getCities$(): Observable<CityVm[]> {
+    return this.apiService.getCities$().pipe(
       map(cityDtos =>
-        cityDtos.map(cityDto => ({
-          name: cityDto.name,
-          name_native: cityDto.name_native,
-          country: cityDto.country,
-          continent: cityDto.continent,
-          latitude: cityDto.latitude,
-          longitude: cityDto.longitude,
-          population: cityDto.population,
-          founded: cityDto.founded,
-          landmarks: cityDto.landmarks,
-        }))
+        cityDtos.map(
+          cityDto =>
+            ({
+              name: cityDto.name,
+              name_native: cityDto.name_native,
+              country: cityDto.country,
+              continent: cityDto.continent,
+              latitude: cityDto.latitude,
+              longitude: cityDto.longitude,
+              population: cityDto.population,
+              founded: cityDto.founded,
+              landmarks: cityDto.landmarks,
+            }) as CityVm
+        )
       )
     );
-    return cityVms$;
   }
 }
