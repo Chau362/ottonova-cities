@@ -1,0 +1,6 @@
+<mat-card *ngIf="city" class="city-card">
+  <app-city-card-header [city]="city"></app-city-card-header>
+  <app-city-card-image [name]="city.name"></app-city-card-image>
+  <app-city-card-content [landmarks]="city.landmarks"></app-city-card-content>
+  <app-city-card-actions [city]="city"></app-city-card-actions>
+</mat-card>

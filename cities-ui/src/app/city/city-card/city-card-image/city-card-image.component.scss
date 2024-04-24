@@ -1,0 +1,17 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+$cities: lagos madrid moscow munich new-york-city sao-paulo sydney tokyo;
+
+.cities-avatar {
+  background-size: cover;
+
+  @each $city in $cities {
+    &-#{$city} {
+      background-image: url('/assets/cities/#{$city}.jpg');
+      background-size: cover;
+    }
+  }
+}

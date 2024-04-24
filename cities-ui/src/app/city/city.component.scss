@@ -1,18 +1,23 @@
+h1 {
+  padding: 2rem;
+  font-style: bold;
+  font-size: 3em;
+}
+
 .cities-grid {
   display: grid;
-  gap: 2rem;
-  // width: min(95%, 70rem);
-  height: min(40%, 100rem);
+  gap: 1rem;
+  padding: 2rem;
+  height: min(60%, 120rem);
 }
 
 .city-card {
   font-size: large;
   border-radius: 0.5rem;
   padding: 2rem;
-  background-color: brown;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 50em) {
   .cities-grid {
     grid-template-columns: repeat(2, 1fr);
   }

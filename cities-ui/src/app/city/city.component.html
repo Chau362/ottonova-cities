@@ -1,9 +1,8 @@
 <h1>Looking for your next holiday destination?</h1>
-
 <main class="cities-grid">
   <div
     *ngFor="let city of cities$ | async; trackBy: trackByName"
     class="city-card">
-    {{ city.name }}
+    <app-city-card [city]="city"> </app-city-card>
   </div>
 </main>

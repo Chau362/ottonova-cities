@@ -1,0 +1,12 @@
+$continents: europe africa asia australia north-america south-america;
+
+.continent-avatar {
+  background-size: cover;
+
+  @each $continent in $continents {
+    &-#{$continent} {
+      background-image: url('/assets/continents/#{$continent}.svg');
+      background-size: cover;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<mat-card-header *ngIf="city">
+  <div
+    mat-card-avatar
+    [ngClass]="'continent-avatar-' + (city.continent | toFilename)"></div>
+  <mat-card-title>{{ city.name }}</mat-card-title>
+  <mat-card-subtitle
+    >{{ city.country }} ({{ city.continent }})</mat-card-subtitle
+  >
+</mat-card-header>

@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, TrackByFunction, inject } from '@angular/core';
+import { Component, TrackByFunction, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Observable, tap } from 'rxjs';
+import { Observable } from 'rxjs';
 import { CityService } from './city.service';
 import { CityVm } from './viewmodels/city.viewmodel';
+import { CityCardComponent } from './city-card/city-card.component';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, CityCardComponent],
   selector: 'app-city',
   templateUrl: './city.component.html',
   styleUrl: './city.component.scss',
