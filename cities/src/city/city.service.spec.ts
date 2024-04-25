@@ -1,18 +1,17 @@
-import { Test, TestingModule } from '@nestjs/testing';
 import { CityService } from './city.service';
 
 describe('CityService', () => {
-  let service: CityService;
+  let cityService: CityService;
 
-  beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
-      providers: [CityService],
-    }).compile();
+  beforeEach(() => {
+    cityService = new CityService();
+  });
 
-    service = module.get<CityService>(CityService);
+  afterEach(() => {
+    jest.clearAllMocks();
   });
 
   it('should be defined', () => {
-    expect(service).toBeDefined();
+    expect(cityService).toBeDefined();
   });
 });
