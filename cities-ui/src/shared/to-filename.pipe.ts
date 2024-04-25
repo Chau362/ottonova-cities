@@ -1,10 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'toFilename',
+  name: 'toFileName',
   standalone: true,
 })
-export class ToFilenamePipe implements PipeTransform {
+export class ToFileNamePipe implements PipeTransform {
   transform(value: string): string {
     value = value.toLowerCase();
     if (value.includes(' ')) {

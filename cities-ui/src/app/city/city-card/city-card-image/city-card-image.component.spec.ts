@@ -8,10 +8,9 @@ describe('CityCardImageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CityCardImageComponent]
-    })
-    .compileComponents();
-    
+      imports: [CityCardImageComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(CityCardImageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -19,5 +18,13 @@ describe('CityCardImageComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should show the alt text when no image source is found', () => {
+    component.name = 'unknown City';
+    fixture.detectChanges();
+    const imgElement: HTMLImageElement =
+      fixture.nativeElement.querySelector('img');
+    expect(imgElement.alt).toBe(`Photo of ${component.name}`);
   });
 });

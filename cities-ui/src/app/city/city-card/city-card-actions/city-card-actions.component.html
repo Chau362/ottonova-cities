@@ -1,7 +1,7 @@
-<mat-card-actions align="end">
+<mat-card-actions *ngIf="city" align="end">
   <button
     mat-icon-button
-    title="Details"
+    [title]="'Details for ' + city.name"
     color="primary"
     aria-label="Example icon button with a more icon"
     (click)="openDialogEvent.emit()">

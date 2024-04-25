@@ -4,7 +4,7 @@ import { CityApiService } from './city.api.service';
 import { CityVm } from './viewmodels/city.viewmodel';
 
 /**
- * Additional Service in order to transform incoming data to ViewModels if necessary.
+ * Additional Service in order to transform incoming data to ViewModels if necessary
  */
 @Injectable({
   providedIn: 'root',
@@ -12,6 +12,10 @@ import { CityVm } from './viewmodels/city.viewmodel';
 export class CityService {
   private readonly apiService = inject(CityApiService);
 
+  /**
+   * Does not really do anything useful yet
+   * @returns
+   */
   getCities$(): Observable<CityVm[]> {
     return this.apiService.getCities$().pipe(
       map(cityDtos =>
