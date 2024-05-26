@@ -21,14 +21,12 @@ ottonova-cities/cities
 2. Install the dependencies:
 
 ```shell
-$ pwd
 npm install
 ```
 
 3. Start the server:
 
 ```shell
-$ pwd
 npm run start
 ```
 
@@ -46,14 +44,12 @@ ottonova-cities/cities-ui
 2. Install the dependencies:
 
 ```shell
-$ pwd
 npm install
 ```
 
 3. Start the server:
 
 ```shell
-$ pwd
 npm run start
 ```
 
